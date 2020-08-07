@@ -41,7 +41,7 @@ count_genes <- function(inputFile,
   
   result[missing_cols] <- 0
   
-  #p-value cannot be zero so modify later
+  #p-value cannot be zero, so modify later
   result[is.na(result)] <- 0
   
   result$TOTAL <- apply(result[, impact_cols], 1, sum)
